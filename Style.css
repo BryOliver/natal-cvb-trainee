@@ -20,9 +20,20 @@
     width: 2px;
     height: 210px;
     background-color: #000000;
-    margin-left: 975px;
+    margin-left: 1090px;
     margin-bottom: -210px;
     margin-top: 400px;
+}
+
+.home_title{
+    font-size: 14px;
+    margin-left: 1100px;
+    margin-top: -310px;
+}
+
+.home_title_2{
+    font-size: 30px;
+    margin-left: 1100px;
 }
 
 .quem_somos{
@@ -34,41 +45,20 @@
     background-color: #E8EEEC;
 }
 
-.quem_somos_linha{
-    width: 850px;
+.quem_somos_linha_2{
+    margin-top: 40px;
+    margin-left: 210px;
+    width: 1100px;
     height: 2px;
     background-color: #000000;
 }
 
 .quem_somos_linha_1{
+    margin-left: 210px;
     margin-bottom: 50px;
-    width: 850px;
+    width: 1100px;
     height: 2px;
     background-color: #000000;
-}
-
-.buttons{
-    padding-left: 580px;
-}
-
-.btn{
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-    font-weight: 700;
-    line-height: 140px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.btn-color{
-    background-color: #000000;
-    color: #4FA0CA;
 }
 
 .eventos{
@@ -78,6 +68,13 @@
     background-color: #BDD1DA;
     top: 1950px;
     left: 0px;
+}
+
+.eventos_linha_1{
+    margin-left: 667px;
+    width: 180px;
+    height: 2px;
+    background-color: #000000;
 }
 
 .seja_um_associado{
@@ -101,7 +98,7 @@
 .conheça_natal{
     position: absolute;
     width: 100%;
-    height: 800px;
+    height: 1000px;
     left: 0px;
     top: 0px;
     background-color: #E8EEEC;
@@ -116,6 +113,40 @@
     top: 0px;
 }
 
+.seja_um_associado_linha_1{
+    margin-left: 550px;
+    width: 400px;
+    height: 2px;
+    background-color: #000000;
+}
+
+.seja_um_associado_linha_2{
+    margin-bottom: 50px;
+    margin-top: -130px;
+    margin-left: 350px;
+    width: 220px;
+    height: 2px;
+    background-color: #000000;
+}
+
+.seja_um_associado_linha_3{
+    margin-bottom: 50px;
+    margin-top: -50px;
+    margin-left: 948px;
+    width: 220px;
+    height: 2px;
+    background-color: #000000;
+}
+
+.seja_um_associado_linha_4{
+    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-left: 350px;
+    width: 820px;
+    height: 2px;
+    background-color: #000000;
+}
+
 .form-control{
     background-color: #C4C4C4;
     height: 30px;
@@ -125,6 +156,7 @@
     margin-block: 10px;
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 1px 1px #111111;
 }
 
 .form_button{
@@ -136,11 +168,43 @@
     font-weight: 800;
 }
 
+.contato_linha_1{
+    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-left: -5px;
+    width: 450px;
+    height: 2px;
+    background-color: #000000;
+}
+
+.caixa_contatos{
+    margin-top: -90px;
+    margin-left: 900px;
+    width: 480px;
+    height: 700px;
+    background-color: #C4C4C4;
+    border-radius: 33px;
+}
+
+.redes h1{
+    margin-left: 950px;
+    margin-top: -700px;
+}
+
+.redes_linha_1{
+    margin-left: 950px;
+    margin-top: -590px;
+    width: 200px;
+    height: 2px;
+    background-color: #000000;
+}
+
 /* ID */
 #natal_cvb_logo{
-    margin-top: 12px;
+    margin-top: 20px;
     margin-left: 88px;
     float: left;
+    display: flex;
 }
 
 #natal_cvb_logo_2{
@@ -148,53 +212,414 @@
 }
 
 #natal_cvb_logo_2 img{
-    margin-bottom: -50px;
+    display: block;
+    margin-bottom: -60px;
+    margin-left: 658px;
 }
 
 #natal_cvb_logo_2 h4{
-    margin-left: 500px;
+    text-align: right;
+    padding-right: 350px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
 }
 
 #menu{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    margin-top: 35px;
-    margin-left: 700px;
+    margin-top: -28px;
+    margin-left: 680px;
 }
 
 #menu a{
+    font-weight: bolder;
     text-align: center;
     padding: 15px;
     text-decoration: none;
-    color: #fff;
-    text-shadow: 1px 1px 1px #111111;
+    color: #000000;
 }
 
 #menu a:hover{
     border-bottom: 4px solid  #99ccff;
 }
 
-#contatos_logo{
-    margin-right: 30px;
+#instagram_logo{
+    margin-top: 30px;
+    margin-left: 1340px;
+}
+
+#instagram_logo img{
+    width: 35px;
+}
+
+#email_logo{
+    margin-top: -39px;
+    margin-left: 1400px;
+}
+
+#email_logo img{
+    width: 35px;
+}
+
+#telephone_logo{
+    margin-top: -39px;
+    margin-left: 1460px;
+}
+
+#telephone_logo img{
+    width: 35px;
+}
+
+#sol_logo img{
+    margin-top: 100px;
+    width: 100px;
+    margin-left: 710px;
+}
+
+#conheça_natal_titulo{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+#conheça_natal_texto{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#conheça_natal_linha_1{
+    width: 300px;
+    height: 2px;
+    background-color: #000000;
+    margin-top: -35px;
+    margin-left: 340px;
+}
+
+#conheça_natal_linha_2{
+    width: 300px;
+    height: 2px;
+    background-color: #000000;
+    margin-top: -5px;
+    margin-left: 880px;
+}
+
+#conheça_natal_linha_3{
+    width: 850px;
+    height: 2px;
+    background-color: #000000;
+    margin-top: 20px;
+    margin-left: 340px;
+}
+
+#conheça_natal_btn{
+    margin-top: 40px;
+    margin-left: 630px;
+    padding-top: 10px;
+    padding-right: 15px;
+    font-weight: 800;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #000000;
+    height: 50px;
+    width: 280px;
+    line-height: 28px;
+    border-radius: 40px;
+}
+
+#conheça_natal_btn a{
     margin-left: 20px;
-    margin-top: 25px;
-    float: right;
+    text-decoration: none;
+    color: #4FA0CA;
 }
 
-#sol{
+#maleta_logo img{
+    width: 100px;
     margin-top: 100px;
+    margin-left: 710px;
 }
 
-#maleta{
-    margin-top: 100px;
+#nossos_serviços_titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#nossos_serviços_linha_1{
+    width: 320px;
+    height: 2px;
+    background-color: #000000;
+    margin-top: -40px;
+    margin-left: 310px;
+}
+
+#nossos_serviços_linha_2{
+    width: 320px;
+    height: 2px;
+    background-color: #000000;
+    margin-top: -3px;
+    margin-left: 885px;
+}
+
+#nossos_serviços_texto{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#nossos_serviços_linha_3{
+    width: 920px;
+    height: 2px;
+    background-color: #000000;
+    margin-top: 40px;
+    margin-left: 300px;
+}
+
+#nossos_serviços_btn{
+    margin-top: 40px;
+    margin-left: 630px;
+    padding-top: 10px;
+    padding-right: 15px;
+    font-weight: 800;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #000000;
+    height: 50px;
+    width: 280px;
+    line-height: 28px;
+    border-radius: 40px;
+}
+
+#nossos_serviços_btn a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: #4FA0CA;
+}
+
+#quem_somos_title{
+    margin-top: 80px;
+    font-weight: bolder;
+    text-align: center;
 }
 
 #quem_somos_texto{
     margin-top: 50px;
+    text-align: justify;
 }
 
+#quem_somos_btn_1{
+    margin-top: 40px;
+    margin-left: 445px;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4FA0CA;
+    text-align: center;
+    background-color: #000000;
+    height: 50px;
+    width: 275px;
+    line-height: 28px;
+    border-radius: 40px;
+}
+
+#quem_somos_btn_1 a{
+    display: flex;
+    padding-left: 15px;
+    padding-top: 10px;
+    color: #4FA0CA;
+    text-decoration: none;
+}
+
+#quem_somos_btn_2{
+    margin-top: -50px;
+    margin-left: 780px;
+    font-weight: 800;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #000000;
+    height: 50px;
+    width: 280px;
+    line-height: 28px;
+    border-radius: 40px;
+}
+
+#quem_somos_btn_2 a{
+    display: flex;
+    padding-left: 30px;
+    padding-top: 10px;
+    color: #4FA0CA;
+    text-decoration: none;
+}
+
+#eventos_title{
+    font-weight: bold;
+    margin-top: 80px;
+    text-align: center;
+}
+
+#eventos_title h3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 550px;
+}
+
+#seja_um_associado_title{
+    font-weight: bold;
+    margin-top: 80px;
+    text-align: center;
+}
+
+#seja_um_associado_title_2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 120px;
+    text-align: center;
+}
+
+#contato_title{
+    margin-left: 160px;
+    margin-top: 60px;
+}
+
+#instagram_logo_2 img{
+    width: 50px;
+    margin-left: 950px;
+    margin-top: -570px;
+    display: flex;
+}
+
+#instagram_logo_2 h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: -55px;
+    margin-left: 1020px;
+    display: flex;
+}
+
+#instagram_logo_2 a{
+    text-decoration: none;
+}
+
+#facebook_logo img{
+    width: 50px;
+    margin-left: 950px;
+    margin-top: 40px;
+    display: flex;
+}
+
+#facebook_logo h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: -55px;
+    margin-left: 1020px;
+    display: flex; 
+}
+
+#facebook_logo a{
+    text-decoration: none;
+}
+
+#email_logo_2 img{
+    width: 50px;
+    margin-left: 950px;
+    margin-top: 40px;
+    display: flex;
+}
+
+#email_logo_2 h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: -55px;
+    margin-left: 1020px;
+    display: flex; 
+}
+
+#email_logo_2 a{
+    text-decoration: none;
+}
+
+#telepnhone_logo_2 img{
+    width: 50px;
+    margin-left: 950px;
+    margin-top: 30px;
+    display: flex;
+}
+
+#telepnhone_logo_2 h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: -60px;
+    margin-left: 1020px;
+    display: flex; 
+}
+
+#telepnhone_logo_2 a{
+    text-decoration: none;
+}
+
+#location_logo img{
+    width: 50px;
+    margin-left: 950px;
+    margin-top: 40px;
+    display: flex;
+}
+
+#location_logo h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: -70px;
+    font-weight: bolder;
+    margin-left: 1020px;
+    padding-right: 160px;
+    line-height: 30px;
+    display: flex; 
+}
+
+#twitter_logo img{
+    width: 50px;
+    margin-left: 950px;
+    margin-top: 40px;
+    display: flex;
+}
+
+#twitter_logo h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: -55px;
+    margin-left: 1020px;
+    display: flex; 
+}
+
+#twitter_logo a{
+    text-decoration: none;
+}
+
+#mapa{
+    margin-top: 60px; 
+    margin-left: 200px;
+}
+
+#lupa{
+    margin-left: -110px;
+    margin-top: -50px;
+}
 /* tags */
+
 header{
     z-index: 9999;
     position: fixed;
@@ -232,6 +657,7 @@ ul{
     font-size: 20px;
     padding-left: 400px;
     padding-right: 200px;
+    list-style-image: url('');
 }
 
 footer{
@@ -260,8 +686,11 @@ form{
     background-color: #C4C4C4;
     width: 500px;
     border-radius: 33px;
-    height: 500px;
-    padding: 10px;
+    height: 553px;
+    margin-top: 10px;
+    margin-left: 500px;
+    padding-left: 60px;
+    padding-top: 20px;
 }
 
 button{
@@ -270,4 +699,15 @@ button{
     position: relative;
     color: #4FA0CA;
     background-color: #000000;
+    margin-left: 80px;
+    display: flex;
+    padding-left: 90px;
+    padding-top: 5px;
+}
+
+iframe{
+    border: 8px solid #000;
+    border-radius: 400px;
+    width: 389px;
+    height: 380px;
 }
