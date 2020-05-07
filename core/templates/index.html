@@ -1,0 +1,244 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="{% static 'style.css' %}">
+    <title>Natal Convention Bureau</title>    
+</head>
+
+<body>
+
+  <div class="all">
+
+    <div class="navbar">
+      <a href="#home">
+        <img src="{% static 'imagens/natal_cvb_logo.png' %}" alt="Natal CVB">
+      </a>        
+     
+            <ul>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+          
+              <li>
+                <a href="#quem_somos">Quem Somos</a>
+              </li>
+          
+              <li>
+                <a href="#eventos">Eventos</a>
+              </li>
+
+              <li>
+                <a href="#associado">Seja um Associado</a>
+              </li>
+
+              <li>
+                <a href="#contatos">Contatos</a>
+              </li>
+            </ul>
+     
+          <div class="navbar_redes">
+            <a href="https://www.instagram.com/natalcvb/" target="_blank">
+            <img src="{% static 'imagens/instagram_logo.png' %}" alt="logo"></a>
+            
+            <a href="mailto:contato@natalcvb.com.br?subject=contato" target="_blank">
+            <img src="{% static 'imagens/email_logo.png' %}" alt="logo"> </a>
+            
+            <a href="tel:+558432192000" target="_blank">
+            <img src="{% static 'imagens/telephone_logo.png' %}" alt="logo"></a>
+          </div>        
+    </div>
+
+    <div class="home" id="home">
+      <div class="bemvindo">
+        <div class="linha-home"></div>
+        <h2>Seja bem vindo ao site da</h2>
+        <h1>NATAL<BR>CONVENTION<BR>BUREAU</h1>
+      </div>
+    </div>
+
+    <div class="quem_somos" id="quem_somos">
+
+      <h1>Quem Somos</h1>
+      <img src="{% static 'imagens/natal_cvb_logo_2.png' %}" alt="logo">
+    
+      <div class="quem_somos_linha_1"></div>
+  
+        <p>
+        
+        {{ post.descricao | linebreaks }}
+        
+        </p>
+        <br>
+        <br>
+        <h2>Missão:</h2>  
+        <p>       
+        
+        {{ missao.descricao | linebreaks }}
+        
+        </p>
+        <br>
+        <br>
+        <p>
+        <h2>Visão:</h2>
+        
+        {{ post.descricao | linebreaks }}
+        
+        </p>
+        <br>
+        <br>
+        <h2>valores:</h2>
+        <ul>
+            <br>
+                {% for post in valores %}
+            <li>{{ post.descricao}};</li>
+                {% endfor %} 
+        </ul>
+      </p>
+
+      <div class="quem_somos_linha_2"></div>
+
+      <div class="btn1">
+        <a href="">Conheça Natal-RN</a>
+      </div>
+
+      <div class="btn2">
+        <a href="">Nossos serviços</a>
+      </div>
+
+    </div>
+
+    <div class="eventos" id="eventos">
+      <h1>Eventos</h1>
+
+      <div class="eventos_linha_1"></div>
+
+      <h2>Venha conferir as novidades que estão acontecendo nesse período</h2>
+    </div>
+
+    <div class="associado" id="associado">
+      <h1>Seja um associado</h1>
+
+      <div class="associado_linha_1"></div>
+      <div class="associado_linha_2"></div>
+      <div class="associado_linha_3"></div>
+
+      <h2>Quais são nossos benefícios?</h2>
+      {% for post in beneficios %}
+      <p>
+        <ul>
+          <li>
+            {{ post.descricao}}
+          </li>
+          <br>
+          </li>
+      </ul>
+      </p>
+      {% endfor %}
+
+      <div class="associado_linha_4"></div>
+
+      <form class="form" data-toggle="validator" role="form" method="POST" >
+        {% csrf_token %}
+        <!-- <h1>Preencha o formulário</h1>
+        <div class="form_group">
+          <label for="textNome" class="control_label">Seu nome (obrigatório)</label>
+          <input class="form_control" placeholder="Ex: Carlos" type="text">
+        </div>
+
+        <div class="form_group">
+          <label for="inputEmail" class="control_label">Nome da sua empresa (obrigatório)</label>
+          <input class="form_control" placeholder="Ex: Dois Irmãos" type="text">
+        </div>
+               
+        <div class="form_group">
+          <label for="inputEmail" class="control_label">Seu email (obrigatório)</label>
+          <input class="form_control" placeholder="Ex: minhaconta@gmail.com" type="email">
+        </div>
+        
+        <div class="form_group">
+          <label for="text" class="control_label">Telefone (obrigatório)</label>
+          <input type="text" class="form_control" placeholder="Ex: (00) 0000-0000">
+        </div>
+        
+        <div class="form_group">
+          <label for="text" class="control_label">Descrição da empresa</label>
+          <input type="text" class="form_control" placeholder="Ex: Empresa de serviços web">
+        </div> -->
+
+        <textarea name="message" id=""></textarea>
+        <input type="submit">
+        
+        <!-- <button type="submit" class="form_btn">Enviar</button> -->
+      </form>
+
+    </div>
+
+    <div class="contatos" id="contatos">
+
+      <h1>Nos encontre em:</h1> 
+
+      <div class="contatos_linha_1"></div>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8129203.416107331!2d-35.203715!3d-5.807906000000001!
+      3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x68f92c61dda90c6a!2sNatal%20Convention%20Bureau!5e0!3m2!1spt-BR!2sbr!4v1588395886830!5m2!1spt-BR!2sbr"
+      frameborder="0" allowfullscreen="" aria-hidden="false"tabindex="0"></iframe>
+
+      <div class="lupa">
+        <img src="{% static 'imagens/lupa.png' %}">
+      </div>
+
+      <div class="contatos_caixa">
+        <h2>Contatos</h2>
+
+        <div class="contatos_linha_2"></div>
+
+        <div class="chat_logo">
+          <img src="{% static 'imagens/chat_logo.png' %}">
+        </div>
+        {% for post in contatos %}
+        <a href="https://www.instagram.com/natalcvb/" target="_blank">
+        <img src="{% static 'imagens/instagram_logo_2.png' %}" alt="Instagram">
+        <h3>{{ post.instagram}}</h3></a>
+      
+        <a href="https://www.facebook.com/natalcvb/" target="_blank">
+        <img src="{% static 'imagens/facebook_logo.png' %}" alt="Facebook">
+        <h3>{{ post.facebook}}</h3></a>
+      
+        <a href="mailto:contato@natalcvb.com.br?subject=contato" target="_blank">
+        <img src="{% static 'imagens/email_logo_2.png' %}" alt="email">
+        <h3>{{ post.email}}</h3></a>
+      
+        <a href="tel:+558432192000" target="_blank">
+        <img src="{% static 'imagens/telephone_logo_2.png' %}" alt="Telefone">
+        <h3>{{ post.telefone}}</h3></a>
+      
+        <img src="{% static 'imagens/location_logo.png' %}" alt="localização">
+        <h3>{{ post.endereco}}</h3>
+              
+        <a href="https://twitter.com/natalcvb?lang=en" target="_blank">
+        <img src="{% static 'imagens/twitter_logo.png' %}" alt="Twitter">
+        <h3>{{ post.twitter}}</h3></a>
+        {% endfor %}
+      </div>
+
+    </div>
+
+    <footer>
+        <div class="natal">
+        <h1>Natal CVB @ 2020. Desenvolvido por</h1>
+        </div>
+        <div class="eject">
+          <a href="http://www.ejectufrn.com.br/" target="_blank">
+          <img src="{% static 'imagens/eject_logo.png' %}" alt="Eject"></a>
+          <h1>EJECT</h1>
+        </div>
+    </footer>
+
+  </div> 
+
+</body>
+</html>

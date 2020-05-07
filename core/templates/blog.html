@@ -1,0 +1,102 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="{% static 'nos.css' %}">
+    <title>Document</title>
+</head>
+<body>
+  <div class="tudo">
+
+    <div class="navbar">
+        
+        <img src="imagens/logoa.png" alt="logo">
+    
+  
+            <ul>
+              <li>
+                <a>Home</a>
+              </li>
+          
+              <li>
+                <a>Quem Somos</a>
+              </li>
+          
+              <li>
+                <a>Eventos</a>
+              </li>
+
+              <li>
+                <a>Seja um Associado</a>
+              </li>
+
+              <li>
+                <a>Contatos</a>
+              </li>
+            </ul>
+     
+
+          <div class="redes">
+            <img   src="imagens/instagram_logo.png" alt="logo">
+
+            <img  src="imagens/email.png" alt="logo">
+
+            <img  src="imagens/telephone_logo.png" alt="logo">
+          </div>
+        
+    </div>
+
+    <div class="home">
+      <div class="bemvindo">
+        <!-- <div class="linha-home">
+        </div> -->
+        <h2>Seja bem vindo ao site da</h2>
+        <h1>NATAL<BR>CONVENTION<BR>BUREAU</h1>
+      </div>
+    </div>
+
+    <div class="quem-somos">
+      <h1>Quem Somos</h1>
+      <center>
+      <div class="linha1">
+      </div>
+      </center>
+      {% for post in beneficios %}
+      <p>{{ post.descricao | linebreaks }} </p>
+      <center>
+      {% endfor %}
+      <div class="linha1">
+      </div>
+      </center>
+      <div class="btn1">
+        <a href="">Conheça Natal-RN</a>
+      </div>
+      <div class="btn2">
+        <a href="">Nossos serviços</a>
+      </div>
+    </div>
+
+    <div class="eventos">
+      <h1>eventos</h1>
+      {% for post in beneficios %}
+      <p>{{ post.descricao | linebreaks }} </p>
+      {% endfor %}
+    </div>
+
+    <div class="associado">
+      <h1>Seja um assocado</h1>
+      {% for post in beneficios %}
+      <p>{{ post.descricao | linebreaks }} </p>
+      {% endfor %}
+    </div>
+
+    <formulário action = "/ seu nome /" method = "post">
+      <label for = "your_name"> Seu nome: </label>
+      <input id = "your_name" type = "text" name = "your_name" value = "{{current_name}}">
+      <input type = "submit" value = "OK">
+    </form>
+
+  </div> 
+</body>
+</html>
