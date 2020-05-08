@@ -16,7 +16,17 @@ from .models import Contatos
 def post_list(request):
 
     if request.method == 'POST':
-        message = request.POST['message']
+
+        message = 'Nome: %(nome)s;Empresa: %(empresa)s;E-mail: %(email)s;Telefone: %(telefone)s;Descrição da empresa: %(descricao)s'        
+        context = {
+            'nome': request.POST['nome'],
+            'empresa': request.POST['empresa'],
+            'email': request.POST['email'],
+            'telefone': request.POST['telefone'],
+            'descricao': request.POST['descricao'],
+        }
+
+        message = message % context
 
         send_mail('Contact Form', 
             message, 
@@ -31,7 +41,6 @@ def post_list(request):
     visao = Visao.objects.get(id = 1)
     valores = Valores.objects.all()
     contatos = Contatos.objects.all()
-    # posts = Post.objects.get(pk = 1)
     return render(request, 'index.html', {'cards': cards, 'beneficios': beneficios, 'missao': missao, 'visao': visao, 'valores': valores, 'post': post, 'contatos': contatos,})
 
 def natal(request):
