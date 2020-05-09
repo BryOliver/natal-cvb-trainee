@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.utils import timezone
+from .forms import SejaAssociado
 from django.core.mail import send_mail
 from django.conf import settings
 from .models import Post
@@ -16,24 +17,19 @@ from .models import Contatos
 def post_list(request):
 
     if request.method == 'POST':
+        form = SejaAssociado(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data['nome'])
+            print(form.cleaned_data['empresa'])
+            print(form.cleaned_data['email'])
+            print(form.cleaned_data['telefone'])
+            print(form.cleaned_data['descricao'])
+            form.send_mail()
+            form = SejaAssociado()
 
-        message = 'Nome: %(nome)s;Empresa: %(empresa)s;E-mail: %(email)s;Telefone: %(telefone)s;Descrição da empresa: %(descricao)s'        
-        context = {
-            'nome': request.POST['nome'],
-            'empresa': request.POST['empresa'],
-            'email': request.POST['email'],
-            'telefone': request.POST['telefone'],
-            'descricao': request.POST['descricao'],
-        }
-
-        message = message % context
-
-        send_mail('Contact Form', 
-            message, 
-            settings.EMAIL_HOST_USER, 
-            ['raulvlb1942000@gmail.com'], 
-            fail_silently=False)
-
+    else:
+        form = SejaAssociado()
+    
     post = Post.objects.get(id = 1)
     cards = Card.objects.all()
     beneficios = Beneficios.objects.all()
@@ -41,7 +37,19 @@ def post_list(request):
     visao = Visao.objects.get(id = 1)
     valores = Valores.objects.all()
     contatos = Contatos.objects.all()
-    return render(request, 'index.html', {'cards': cards, 'beneficios': beneficios, 'missao': missao, 'visao': visao, 'valores': valores, 'post': post, 'contatos': contatos,})
+
+
+    context = {
+        'cards': cards,
+        'beneficios': beneficios,
+        'missao': missao,
+        'visao': visao,
+        'valores': valores,
+        'post': post,
+        'contatos': contatos,
+        'form' : form,
+    }
+    return render(request, 'index.html', context)
 
 def natal(request):
     conheca = Natal.objects.all()

@@ -121,6 +121,9 @@
 
     <div class="associado" id="associado">
       <h1>Seja um associado</h1>
+      <!-- {% if is_valid %}
+      <p>valido</p>
+      {% endif %} -->
 
       <div class="associado_linha_1"></div>
       <div class="associado_linha_2"></div>
@@ -141,38 +144,34 @@
 
       <div class="associado_linha_4"></div>
 
-      <form class="form" data-toggle="validator" role="form" method="POST" >
+      <form action="#associado" class="form" data-toggle="validator" role="form" method="POST" >
         {% csrf_token %}
         <h1>Preencha o formulário</h1>
-        <div class="form_group">
-          <label for="textNome" class="control_label">Seu nome (obrigatório)</label>
-          <input name="nome" class="form_control" placeholder="Ex: Carlos" type="text">
+
+      {% for field in form %}
+      <div class="form_group">
+        <div class="control_label">
+        {{ field.label_tag }}
         </div>
 
-        <div class="form_group">
-          <label for="inputEmail" class="control_label">Nome da sua empresa (obrigatório)</label>
-          <input name="empresa" class="form_control" placeholder="Ex: Dois Irmãos" type="text">
-        </div>
-               
-        <div class="form_group">
-          <label for="inputEmail" class="control_label">Seu email (obrigatório)</label>
-          <input name="email" class="form_control" placeholder="Ex: minhaconta@gmail.com" type="email">
-        </div>
-        
-        <div class="form_group">
-          <label for="text" class="control_label">Telefone (obrigatório)</label>
-          <input name="telefone" type="text" class="form_control" placeholder="Ex: (00) 0000-0000">
-        </div>
-        
-        <div class="form_group">
-          <label for="text" class="control_label">Descrição da empresa</label>
-          <input name="descricao" type="text" class="form_control" placeholder="Ex: Empresa de serviços web">
+        <div>
+        {{ field }}
         </div>
 
-        <!-- <textarea name="message" id=""></textarea>
-        <input type="submit"> -->
+        {% if fied.errors %}
+        <ul>
+          {% for error in field.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
+
+
         
-        <button type="submit" class="form_btn">Enviar</button>
+      <button type="submit" class="form_btn">Enviar</button>
+
       </form>
 
     </div>
