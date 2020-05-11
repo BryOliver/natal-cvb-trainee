@@ -50,8 +50,9 @@ class Valores(models.Model):
         verbose_name_plural = 'Valores'
 
 class Card(models.Model):
-    titulo   = models.CharField(max_length = 30, blank= False, verbose_name ='de um titulo para a etiqueta')
-    descricao= models.TextField(max_length= 50, blank= False, verbose_name = 'descrição do evento')
+    carrosel   = models.CharField(null=True,max_length = 30, blank= False, verbose_name ='de um titulo para a etiqueta')
+    titulo   = models.CharField(null=True,max_length = 30, blank= False, verbose_name ='de um titulo para o evento')
+    descricao= models.TextField(null=True,max_length= 100, blank= False, verbose_name = 'descrição do evento')
    
     imagem   = models.ImageField(
         upload_to= 'eventos/',
@@ -60,13 +61,139 @@ class Card(models.Model):
         verbose_name= 'imagem do evento',
     )
 
+    pagina   = models.TextField(null=True,blank= False, verbose_name = 'descrição na página do evento')
+
+    titulodo   = models.CharField(null=True,max_length = 30, blank= True, verbose_name ='de um titulo para o evento')
+    descricaodo= models.TextField(null=True,max_length= 100, blank= True, verbose_name = 'descrição do evento')
+   
+    imagemdo   = models.ImageField(
+        upload_to= 'eventos/',
+        null= True,
+        blank= True,
+        verbose_name= 'imagem do evento',
+    )
+
+    paginado   = models.TextField(null=True,blank= True, verbose_name = 'descrição na página do evento')
+
+    titulotre   = models.CharField(null=True,max_length = 30, blank= True, verbose_name ='de um titulo para o evento')
+    descricaotre= models.TextField(null=True,max_length= 100, blank= True, verbose_name = 'descrição do evento')
+   
+    imagemtre   = models.ImageField(
+        upload_to= 'eventos/',
+        null= True,
+        blank= True,
+        verbose_name= 'imagem do evento',
+    )
+
+    paginatre   = models.TextField(null=True,blank= True, verbose_name = 'descrição na página do evento')
+
 
     def __str__(self):
-        return self.titulo
+        return self.carrosel
     
     class Meta:
-        verbose_name = 'Card'
-        verbose_name_plural = 'Cards'
+        verbose_name = 'Primeiro carrosel'
+        verbose_name_plural = 'Primeiro carrosel'
+
+class Cards(models.Model):
+    carrosel   = models.CharField(null=True,max_length = 30, blank= False, verbose_name ='de um titulo para a etiqueta')
+    titulo   = models.CharField(null=True,max_length = 30, blank= False, verbose_name ='de um titulo para o evento')
+    descricao= models.TextField(null=True,max_length= 100, blank= False, verbose_name = 'descrição do evento')
+   
+    imagem   = models.ImageField(
+        upload_to= 'eventos/',
+        null= True,
+        blank= False,
+        verbose_name= 'imagem do evento',
+    )
+
+    pagina   = models.TextField(null=True,blank= False, verbose_name = 'descrição na página do evento')
+
+    titulodo   = models.CharField(null=True,max_length = 30, blank= False, verbose_name ='de um titulo para o evento')
+    descricaodo= models.TextField(null=True,max_length= 100, blank= False, verbose_name = 'descrição do evento')
+   
+    imagemdo   = models.ImageField(
+        upload_to= 'eventos/',
+        null= True,
+        blank= False,
+        verbose_name= 'imagem do evento',
+    )
+
+    paginado   = models.TextField(null=True,blank= False, verbose_name = 'descrição na página do evento')
+
+    titulotre   = models.CharField(null=True,max_length = 30, blank= False, verbose_name ='de um titulo para o evento')
+    descricaotre= models.TextField(null=True,max_length= 100, blank= False, verbose_name = 'descrição do evento')
+   
+    imagemtre   = models.ImageField(
+        upload_to= 'eventos/',
+        null= True,
+        blank= False,
+        verbose_name= 'imagem do evento',
+    )
+
+    paginatre   = models.TextField(null=True,blank= False, verbose_name = 'descrição na página do evento')
+
+
+    def __str__(self):
+        return self.carrosel
+    
+    class Meta:
+        verbose_name = 'Carroseis com tres eventos'
+        verbose_name_plural = 'Carroseis com tres eventos'
+
+class Cardsdois(models.Model):
+    carrosel   = models.CharField(null=True,max_length = 30, blank= False, verbose_name ='de um titulo para a etiqueta')
+    titulo   = models.CharField(null=True,max_length = 30, blank= False, verbose_name ='de um titulo para o evento')
+    descricao= models.TextField(null=True,max_length= 100, blank= False, verbose_name = 'descrição do evento')
+   
+    imagem   = models.ImageField(
+        upload_to= 'eventos/',
+        null= True,
+        blank= False,
+        verbose_name= 'imagem do evento',
+    )
+
+    pagina   = models.TextField(null=True,blank= False, verbose_name = 'descrição na página do evento')
+
+    titulodo   = models.CharField(null=True,max_length = 30, blank= False, verbose_name ='de um titulo para o evento')
+    descricaodo= models.TextField(null=True,max_length= 100, blank= False, verbose_name = 'descrição do evento')
+   
+    imagemdo   = models.ImageField(
+        upload_to= 'eventos/',
+        null= True,
+        blank= False,
+        verbose_name= 'imagem do evento',
+    )
+
+    paginado   = models.TextField(null=True,blank= False, verbose_name = 'descrição na página do evento')
+
+    def __str__(self):
+        return self.carrosel
+    
+    class Meta:
+        verbose_name = 'Carrosseis com dois eventos'
+        verbose_name_plural = 'Carrosseis com dois eventos'
+
+class Cardsum(models.Model):
+    carrosel   = models.CharField(null=True,max_length = 30, blank= False, verbose_name ='de um titulo para a etiqueta')
+    titulo   = models.CharField(null=True,max_length = 30, blank= False, verbose_name ='de um titulo para o evento')
+    descricao= models.TextField(null=True,max_length= 100, blank= False, verbose_name = 'descrição do evento')
+   
+    imagem   = models.ImageField(
+        upload_to= 'eventos/',
+        null= True,
+        blank= False,
+        verbose_name= 'imagem do evento',
+    )
+
+    pagina   = models.TextField(null=True,blank= False, verbose_name = 'descrição na página do evento')
+
+    def __str__(self):
+        return self.carrosel
+    
+    class Meta:
+        verbose_name = 'Carrosel com um evento'
+        verbose_name_plural = 'Carrosel com um evento'
         
 class Servico(models.Model):
     titulo   = models.CharField(max_length = 30, blank= False, verbose_name ='de um titulo para a etiqueta')

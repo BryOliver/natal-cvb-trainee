@@ -23,3 +23,20 @@ class SejaAssociado(forms.Form):
 
         template_name = 'associado.html'
         send_mail_template(subject, template_name, context, [settings.CONTACT_EMAIL])
+
+
+class Inscrever(forms.Form):
+    nome = forms.CharField(label='Nome completo', max_length=100, widget=forms.TextInput(attrs={'class': 'form_control',}))
+    email = forms.EmailField(label='E-mail', widget=forms.TextInput(attrs={'class': 'form_control',}))
+    telefone = forms.CharField(label='Telefone para contato', max_length=100, widget=forms.TextInput(attrs={'class': 'form_control',}))
+
+    def send_mail(self):
+        subject = 'Contato Associado',
+        context = {
+            'nome': self.cleaned_data['nome'],
+            'email': self.cleaned_data['email'],
+            'telefone': self.cleaned_data['telefone'],
+        }   
+
+        template_name = 'inscrito.html'
+        send_mail_template(subject, template_name, context, [settings.CONTACT_EMAIL])

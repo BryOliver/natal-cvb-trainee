@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>bem vindo!!!</h1>
+    
+    <h1>Evento</h1>
+    
+    <form action="#associado" class="form" data-toggle="validator" role="form" method="POST" >
+        {% csrf_token %}
+        <h1>Preencha o formulário</h1>
+
+      {% for field in form %}
+      <div class="form_group">
+        <div class="control_label">
+        {{ field.label_tag }}
+        </div>
+
+        <div>
+        {{ field }}
+        </div>
+
+        {% if fied.errors %}
+        <ul>
+          {% for error in field.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
+
+
+        
+      <button type="submit" class="form_btn">Enviar</button>
+
+      </form>
+    
+</body>
+</html>

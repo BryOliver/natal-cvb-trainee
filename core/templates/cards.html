@@ -1,0 +1,209 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css"  href="{% static 'cards.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Carrossel</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+    <div class="row">
+
+
+      <div class="col-md-12 tudo">
+          <h1>Eventos</h1>
+       
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+       
+           
+            <div class="carousel-inner cartas">
+              
+              <div class="carousel-item active p">
+                <div class="card-deck">  
+
+                    <div class="card carta">
+                      <img src="{{card.imagem.url}}" class="card-img-top" alt="...">
+                      <div class="card-body card-corpo">
+                        <h5 class="card-title">{{ card.titulo }}</h5>
+                        <p class="card-text">{{ card.descricao }}</p>
+                      </div>
+                        <a href="#" class="saiba-mais">Saiba-mais</a>
+                    </div>
+
+                    <div class="card carta">
+                      <img src="{{card.imagemdo.url}}" class="card-img-top" alt="...">
+                      <div class="card-body card-corpo">
+                        <h5 class="card-title">{{ card.titulodo }}</h5>
+                        <p class="card-text">{{ card.descricaodo }}</p>
+                      </div>
+                        <a href="#" class="saiba-mais">Saiba-mais</a>
+                    </div>
+
+                    <div class="card carta">
+                      <img src="{{card.imagemtre.url}}" class="card-img-top" alt="...">
+                      <div class="card-body card-corpo">
+                        <h5 class="card-title">{{ card.titulotre }}</h5>
+                        <p class="card-text">{{ card.descricaotre }}</p>
+                      </div>
+                        <a href="#" class="saiba-mais">Saiba-mais</a>
+                    </div>
+
+
+                  </div>
+                  <p>Venha conferir as novidades que estão acontecendo nesse período</p>
+              </div>
+
+
+
+              {% for cards in cards %}
+              <div class="carousel-item p">
+                <div class="card-deck">  
+
+                    <div class="card carta">
+                      <img src="{{cards.imagem.url}}" class="card-img-top" alt="...">
+                      <div class="card-body card-corpo">
+                        <h5 class="card-title">{{ cards.titulo }}</h5>
+                        <p class="card-text">{{ cards.descricao }}</p>
+                      </div>
+                        <a href="#" class="saiba-mais">Saiba-mais</a>
+                    </div>
+
+                    <div class="card carta">
+                      <img src="{{cards.imagemdo.url}}" class="card-img-top" alt="...">
+                      <div class="card-body card-corpo">
+                        <h5 class="card-title">{{ cards.titulodo }}</h5>
+                        <p class="card-text">{{ cards.descricaodo }}</p>
+                      </div>
+                        <a href="#" class="saiba-mais">Saiba-mais</a>
+                    </div>
+
+                    <div class="card carta">
+                      <img src="{{cards.imagemtre.url}}" class="card-img-top" alt="...">
+                      <div class="card-body card-corpo">
+                        <h5 class="card-title">{{ cards.titulotre }}</h5>
+                        <p class="card-text">{{ cards.descricaotre }}</p>
+                      </div>
+                        <a href="#" class="saiba-mais">Saiba-mais</a>
+                    </div>
+
+
+                  </div>
+                  <p>Venha conferir as novidades que estão acontecendo nesse período</p>
+              </div>
+              {% endfor %}
+             
+
+              
+              <div class="carousel-item p">
+                <div class="card-deck">  
+
+                    <div class="card carta">
+                      <img src="{{cardsdois.imagem.url}}" class="card-img-top" alt="...">
+                      <div class="card-body card-corpo">
+                        <h5 class="card-title">{{ cardsdois.titulo }}</h5>
+                        <p class="card-text">{{ cardsdois.descricao }}</p>
+                      </div>
+                        <a href="#" class="saiba-mais">Saiba-mais</a>
+                    </div>
+
+                    <div class="card carta">
+                      <img src="{{cardsdois.imagemdo.url}}" class="card-img-top" alt="...">
+                      <div class="card-body card-corpo">
+                        <h5 class="card-title">{{ cardsdois.titulodo }}</h5>
+                        <p class="card-text">{{ cardsdois.descricaodo }}</p>
+                      </div>
+                        <a href="#" class="saiba-mais">Saiba-mais</a>
+                    </div>
+
+                    <div class="card carta">
+                      <img src="{% static 'imagens/natal.png' %}" class="card-img-top" alt="...">
+                      <div class="card-body card-corpo">
+                        <h5 class="card-title">Em Breve</h5>
+                        <p class="card-text">Em breve mais novidades</p>
+                      </div>
+                        <a  class="saiba-mais">Saiba-mais</a>
+                    </div>
+
+
+                  </div>
+                  <p>Venha conferir as novidades que estão acontecendo nesse período</p>
+              </div>
+              
+
+              {% for cardsum in cardsum %}
+              <div class="carousel-item p">
+                <div class="card-deck">  
+
+                  
+                    <div class="card carta">
+                      <img src="{{cardsum.imagem.url}}" class="card-img-top" alt="...">
+                      <div class="card-body card-corpo">
+                        <h5 class="card-title">{{ cardsum.titulo }}</h5>
+                        <p class="card-text">{{ cardsum.descricao }}</p>
+                      </div>
+                        <a href="#" class="saiba-mais">Saiba-mais</a>
+                    </div>
+
+                    <div class="card carta">
+                      <img src="{% static 'imagens/natal.png' %}" class="card-img-top" alt="...">
+                      <div class="card-body card-corpo">
+                        <h5 class="card-title">Em breve</h5>
+                        <p class="card-text">Em breve mais novidades</p>
+                      </div>
+                        <a  class="saiba-mais">Saiba-mais</a>
+                    </div>
+
+                    <div class="card carta">
+                      <img src="{% static 'imagens/natal.png' %}" class="card-img-top" alt="...">
+                      <div class="card-body card-corpo">
+                        <h5 class="card-title">Em breve</h5>
+                        <p class="card-text">Em breve mais novidades</p>
+                      </div>
+                        <a class="saiba-mais">Saiba-mais</a>
+                    </div>
+
+
+                  </div>
+                  <p>Venha conferir as novidades que estão acontecendo nesse período</p>
+              </div>
+              {% endfor %}
+              
+              
+
+              </div>
+
+            <a class="carousel-control-prev esq" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next dir" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          
+          </div>
+      
+    
+          
+    
+      </div>
+
+
+      
+      
+      </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
