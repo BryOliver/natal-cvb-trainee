@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    -webkit-user-drag: none;
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 2000px){
+
+    body{
+        background-color: #F7FBFC;
+        margin: 0;
+        padding: 0;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+    .bandeira_de_natal{
+        border-radius: 20px;
+        margin-top: 5%;
+        margin-left: 27%;
+        display: flex;
+    }
+    
+    .bandeira_de_natal h1{
+        margin-top: 3%;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+        margin-left: 10%;
+    }
+    
+    .conheça_natal_linha_1{
+        width: 60%;
+        height: 2px;
+        background-color: #000000;
+        margin-left: 20%;
+        margin-top: 2%;
+    }
+    
+    .conheça_natal_title_2{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 60%;
+        margin-top: 2%;
+        background-color: #5ABFC4;
+        margin-left: 35%;
+        margin-right: 35%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border-radius: 60px;
+        font-weight: bolder;
+        color: #ffffff;
+    }
+    
+    .conheça_natal_texto{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 4%;
+        font-size: 120%;
+    }
+    
+    .conheça_natal_title_3{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 60%;
+        margin-top: 5%;
+        background-color: #5ABFC4;
+        margin-left: 35%;
+        margin-right: 35%;
+        padding: 1% 5%;
+        border-radius: 60px;
+        font-weight: bolder;
+        color: #ffffff;
+    }
+
+    .fotos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 60%;
+        margin: auto;
+    }
+
+    .foto_1, .foto_2, .foto_3, .foto_4{
+        margin: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .foto_1{
+        display: inline-block;
+    }
+    
+    .foto_1 h3{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+        padding-bottom: 1%;
+    }
+    
+    .foto_2{
+        float: right;
+    }
+    
+    .foto_2 h3{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+        padding-bottom: 1%;
+    }
+    
+    .foto_3{
+        display: inline-block;
+    }
+    
+    .foto_3 h3{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+        padding-bottom: 1%;
+    }
+    
+    .foto_4{
+        float: right;
+    }
+    
+    .foto_4 h3{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+        padding-bottom: 1%;
+    }
+    
+    .conheça_natal_linha_2{
+        width: 60%;
+        height: 2px;
+        background-color: #000000;
+        margin-left: 20%;
+        margin-top: 2%;
+    }
+    
+    .btn{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #EE2836;
+        margin-left: 70%;
+        margin-right: 20%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        text-align: center;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border-radius: 40px;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.47);
+    }
+    
+    .btn a{
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bolder;
+    }
+    
+    footer{
+        background-color: #5ABFC4;
+        text-align: center;
+    }
+    
+    footer h3{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+        font-size: 120%;
+        display: inline-block;
+        color: #000000;
+    }
+    
+    footer img{
+        width: 1.3%;
+        padding-top: 0.5%;
+        margin-left: 0.5%;
+    }
+
+}
