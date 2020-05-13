@@ -10,8 +10,6 @@
         -webkit-user-drag: none;
     }
 
-    /* ESTILOS */
-
     body{
         background-color: #ffffff;
         margin: 0;
@@ -72,6 +70,7 @@
 
     .barra a{
         color: #000000 !important;
+        font-weight: bolder !important;
     }
     
     .navbar{
@@ -591,8 +590,9 @@
     }
 
     .nav_logos{
-        float: right;
-        margin-right: 5%;
+        float: left;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
 
     .nav_logos a{
@@ -636,6 +636,8 @@
 
     .barra a{
         color: #000000 !important;
+        margin-top: 5%;
+        font-weight: bolder;
     }
     
     .navbar{
@@ -1157,8 +1159,9 @@
     }
 
     .nav_logos{
-        float: right;
-        margin-right: 5%;
+        float: left;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
 
     .nav_logos a{
@@ -1201,6 +1204,8 @@
     }
 
     .barra a{
+        font-weight: bolder !important;
+        margin-top: 5%;
         color: #000000 !important;
     }
     
@@ -1514,7 +1519,7 @@
     }
 
     .associados_texto_2{
-        text-align: justify;
+        text-align: left;
         margin-top: 5%;;
         font-size: 130%;
     }
