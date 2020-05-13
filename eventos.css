@@ -1,14 +1,14 @@
-*{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    scroll-behavior: smooth;
-    -webkit-user-drag: none;
-}
-
 /* DESKTOPS */
 
-@media only screen and (min-device-width: 769px) and (max-device-width: 2000px){
+@media only screen and (min-device-width: 1024px) and (max-device-width: 2000px){
+
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        scroll-behavior: smooth;
+        -webkit-user-drag: none;
+    }
 
     body{
         background-color: #ffffff;
@@ -22,26 +22,6 @@
         width: 100%;
     }
 
-    footer{
-        background-color: #5ABFC4;
-        text-align: center;
-        margin-top: 2%;
-    }
-    
-    footer h3{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: bolder;
-        font-size: 120%;
-        display: inline-block;
-        color: #000000;
-    }
-    
-    footer img{
-        width: 1.3%;
-        padding-bottom: 0.5%;
-        margin-left: 0.5%;
-    }
-
     .title{
         float: left;
         margin-top: 5%;
@@ -50,13 +30,13 @@
     .title h1{
         font-weight: bolder;
         font-size: 280%;
-        margin-left: 6%;
+        margin-left: 4%;
     }
 
     .title h2{
         font-size: 130%;
         margin-top: 1%;
-        margin-left: 6%;
+        margin-left: 4%;
     }
 
     .eventos_linha{
@@ -67,6 +47,10 @@
         margin-left: 4%;
         margin-right: 2%;
         margin-top: 4%;
+    }
+
+    .botao{
+        display: none;
     }
 
     .conteudo img{
@@ -92,7 +76,7 @@
 
     .button_1{
         display: inline-block;
-        color: #ffffff;
+        color: #ffffff !important;
         background: #EE2836;
         font-weight: bolder;
         padding-left: 1%;
@@ -100,6 +84,7 @@
         border-radius: 40px;
         padding-top: 0.5%;
         padding-bottom: 0.5%;
+        text-decoration: none !important;
     }
 
     .button_1 a{
@@ -108,7 +93,7 @@
 
     .button_2{
         margin-left: 2%;
-        color: #ffffff;
+        color: #ffffff !important;
         background: #EE2836;
         font-weight: bolder;
         padding-left: 1%;
@@ -116,10 +101,387 @@
         border-radius: 40px;
         padding-top: 0.5%;
         padding-bottom: 0.5%;
+        text-decoration: none !important;
     }
 
     .button_2 a{
         text-decoration: none;
+    }
+
+    form{
+        display: none;
+    }
+
+    footer{
+        background-color: #5ABFC4;
+        text-align: center;
+        margin-top: 2%;
+    }
+    
+    footer h3{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+        font-size: 120%;
+        display: inline-block;
+        color: #000000;
+    }
+    
+    footer img{
+        width: 1.3%;
+        padding-bottom: 0.5%;
+        margin-left: 0.5%;
+    }
+
+}
+
+/* IPADS/TABLETS */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        scroll-behavior: smooth;
+        -webkit-user-drag: none;
+    }
+
+    body{
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    header{
+        width: 100%;
+    }
+
+    .title{
+        float: left;
+        margin-top: 5%;
+    }
+
+    .title h1{
+        font-weight: bolder;
+        font-size: 280%;
+        margin-left: 4%;
+    }
+
+    .title h2{
+        font-size: 130%;
+        margin-top: 1%;
+        margin-left: 4%;
+    }
+
+    .eventos_linha{
+        width: 91%;
+        height: 0.3%;
+        background-color: black;
+        margin-bottom: 5%;
+        margin-left: 4%;
+        margin-right: 2%;
+        margin-top: 4%;
+    }
+
+    .botao{
+        text-align: center;
+        background: #EE2836;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        border: 4px solid #EE2836;
+        border-radius: 40px;
+        color: #ffffff;
+        font-weight: bolder;
+        width: 50%;
+        margin-left: 38%;
+        padding: 1%;
+    }
+
+    .conteudo img{
+        width: 55%;
+        height: 35%;
+        float: right;
+        margin-left: 5%;
+        border-radius: 22px;
+        margin-top: 1%;
+    }
+
+    .conteudo p{
+        text-align: justify;
+        padding-left: 4%;
+        padding-right: 5%;
+        margin-top: 5%;
+    }
+
+    .eventos_button{
+        text-align: right;
+        margin-right: 15%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .button_1{
+        display: none;
+    }
+
+    .button_2{
+        color: #ffffff;
+        background: #EE2836;
+        font-weight: bolder;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 40px;
+    }
+
+    .button_2 a{
+        text-decoration: none;
+    }
+
+    form{
+        background-color: #EABF0D;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 15%;
+        padding: 5%;
+        border-radius: 22px;
+        width: 70%;
+    }
+
+    form h4{
+        font-weight: bolder;
+        padding-bottom: 5%;
+    }
+
+    label{
+        font-weight: bolder;
+        font-size: 120%;
+        padding-bottom: 1%;
+    }
+
+    .input{
+        border-radius:  22px;
+        background: #F7FBFC;
+        border: 1px solid rgba(0, 0, 0, 0.07);
+        padding: 2%;
+        width: 100%;
+        margin-bottom: 2%;
+    }
+
+    .btn_form{
+        text-align: center;
+        background: #EE2836;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        border: 4px solid #EE2836;
+        border-radius: 40px;
+        color: #ffffff;
+        font-weight: bolder;
+        width: 50%;
+        margin-left: 25%;
+        padding: 1%;
+    }
+
+    footer{
+        background-color: #5ABFC4;
+        text-align: center;
+        margin-top: 2%;
+    }
+    
+    footer h3{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+        font-size: 120%;
+        display: inline-block;
+        color: #000000;
+    }
+    
+    footer img{
+        width: 2%;
+        padding-bottom: 0.5%;
+        margin-left: 0.5%;
+    }
+
+}
+
+/* SMARTPHONES */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 760px){
+
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        scroll-behavior: smooth;
+        -webkit-user-drag: none;
+    }
+
+    body{
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    header{
+        width: 100%;
+    }
+
+    .title{
+        float: left;
+        margin-top: 5%;
+    }
+
+    .title h1{
+        font-weight: bolder;
+        font-size: 280%;
+        margin-left: 3%;
+    }
+
+    .title h2{
+        font-size: 110%;
+        margin-top: 1%;
+        margin-left: 4%;
+    }
+
+    .eventos_linha{
+        width: 91%;
+        height: 0.3%;
+        background-color: black;
+        margin-bottom: 2%;
+        margin-left: 4%;
+        margin-right: 2%;
+        margin-top: 4%;
+        margin-bottom: 10%;
+    }
+
+    .botao{
+        text-align: center;
+        background: #EE2836;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        border: 4px solid #EE2836;
+        border-radius: 40px;
+        color: #ffffff;
+        font-weight: bolder;
+        width: 50%;
+        margin-left: 23%;
+        padding: 1%;
+    }
+
+    .conteudo img{
+        width: 100%;
+        height: 35%;
+        float: right;
+        margin-left: 5%;
+        border-radius: 22px;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .conteudo p{
+        text-align: justify;
+        padding-left: 4%;
+        padding-right: 5%;
+        margin-top: 3%;
+    }
+
+    form{
+        background-color: #EABF0D;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 6%;
+        padding: 5%;
+        border-radius: 22px;
+    }
+
+    form h4{
+        font-weight: bolder;
+    }
+
+    label{
+        font-weight: bolder;
+        font-size: 120%;
+    }
+
+    .input{
+        border-radius:  22px;
+        background: #F7FBFC;
+        border: 1px solid rgba(0, 0, 0, 0.07);
+        padding: 2%;
+        width: 100%;
+    }
+
+    .btn_form{
+        text-align: center;
+        background: #EE2836;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        border: 4px solid #EE2836;
+        border-radius: 40px;
+        color: #ffffff;
+        font-weight: bolder;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .eventos_button{
+        text-align: right;
+        margin-right: 5%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .button_1{
+        display: none;
+    }
+
+    .button_2{
+        margin-left: 2%;
+        color: #ffffff;
+        background: #EE2836;
+        font-weight: bolder;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 40px;
+    }
+
+    .button_2 a{
+        text-decoration: none;
+    }
+
+    .evento{
+        background: #F7FBFC;
+    }
+
+    .evento h1{
+        margin-top: 3%;
+        font-size: 220%;
+        font-weight: bolder;
+        margin-left: 15%;
+
+    }
+
+    footer{
+        background-color: #5ABFC4;
+        text-align: center;
+        margin-top: 2%;
+    }
+    
+    footer h3{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+        font-size: 100%;
+        display: inline-block;
+        color: #000000;
+    }
+    
+    footer img{
+        width: 3.5%;
+        padding-bottom: 0.5%;
+        margin-left: 0.5%;
     }
 
 }
