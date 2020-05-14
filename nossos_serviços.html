@@ -5,6 +5,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="nossos_serviços.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
         <title>Nossos serviços</title>
     </head>
 
@@ -13,15 +16,15 @@
             <div class="row">
 
                <div class="conteudo">
-                <h1>Serviços oferecidos</h1>
+                <h1 data-aos="fade-down" data-aos-delay="400">Serviços oferecidos</h1>
             
-                <div class="nossos_serviços_linha"></div>
+                <div class="nossos_serviços_linha" data-aos="fade-down" data-aos-delay="400"></div>
             
-                <h2>Descubra os fornecedores certos para o seu evento</h2>
+                <h2 data-aos="fade-down" data-aos-delay="400">Descubra os fornecedores certos para o seu evento</h2>
 
                 <div class="col-md-12 container">
                     
-                    <div class="bloco">
+                    <div class="bloco" data-aos="fade-down" data-aos-delay="500">
                         <img src="imagens/predio.png">
                         <h3>Eventos/Hotéis</h3>
                         <p>
@@ -35,7 +38,7 @@
                         </p>
                     </div>
 
-                    <div class="bloco">
+                    <div class="bloco" data-aos="fade-down" data-aos-delay="600">
                         <img src="imagens/talheres.png">
                         <h3>Alimentos e bebidas</h3>
                         <p>
@@ -44,7 +47,7 @@
                         </p>
                     </div>
 
-                    <div class="bloco">
+                    <div class="bloco" data-aos="fade-down" data-aos-delay="700">
                         <img src="imagens/transporte.png" id="transporte">
                         <h3>Transporte</h3>
                         <p>
@@ -55,7 +58,7 @@
                         </p>
                     </div>
 
-                    <div class="bloco" id="mais">
+                    <div class="bloco" id="mais" data-aos="fade-down" data-aos-delay="800">
                         <img src="imagens/mais.png">
                         <h3>Outros serviços</h3>
                         <p>
@@ -102,5 +105,11 @@
                 EJECT
             </h3>
         </footer>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+            AOS.init();
+        </script>
 
     </body>

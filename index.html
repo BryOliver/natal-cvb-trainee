@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
     <title>Natal Convention Bureau</title>
   </head>
@@ -23,11 +25,11 @@
 
           <img class="navbar-brand logo_navbar" src="imagens/natal_cvb_logo.png"></img>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsite">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSite">
+            <div class="collapse navbar-collapse links" id="navbarsite">
               <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
@@ -67,8 +69,16 @@
 
       <div class="col-md-12 home" id="home">
 
-        <h2>Bem-vindo ao site da</h2>
-        <h1>NATAL<br>CONVENTION<br>BUREAU</h1>
+        <div class="onda">
+          <img src="imagens/onda.png">
+        </div>
+
+        <div class="background">
+          <img src="imagens/home_foto.jpg">
+        </div>
+
+        <h2 data-aos="fade-left">Bem-vindo ao site da</h2>
+        <h1 data-aos="fade-left">NATAL<br>CONVENTION<br>BUREAU</h1>
 
       </div>
 
@@ -76,7 +86,7 @@
 
         <div class="quem_somos">
 
-          <div class="text_img">
+          <div data-aos="fade-down" class="text_img">
             <img src="imagens/natal_cvb_logo_2.png">
           <div class="quem_somos_linha_1"></div>
   
@@ -101,7 +111,7 @@
   
           <div class="quem_somos_texto_2">
   
-            <div class="subtextos">
+            <div data-aos="fade-down" data-aos-delay="400" class="subtextos">
               <h2>Missão</h2>
             <p>
               Promover o desenvolvimento do Turismo de Eventos e Negócios em Natal, por meio da captação de eventos nacionais e internacionais, da geração
@@ -109,14 +119,14 @@
             </p>
             </div>
   
-            <div class="subtextos">
+            <div data-aos="fade-down" data-aos-delay="600" class="subtextos">
               <h2>Visão</h2>
             <p>
               Consolidar Natal como destino para o Turismo de Eventos e Negócios no mercado nacional e internacional.
             </p>
             </div>
   
-            <div class="subtextos">
+            <div data-aos="fade-down" data-aos-delay="800" class="subtextos">
               <h2>Valores</h2>
               <p>
                 <ul>
@@ -134,7 +144,7 @@
   
         </div>
 
-        <div class="buttons">
+        <div class="buttons" data-aos="flip-up" data-aos-delay="400">
           <a href="nossos_serviços.html" class="quem_somos_btn_1">Nossos serviços</a>
           <a href="conheça_natal.html" class="quem_somos_btn_2">Conheça Natal-RN</a>
         </div>
@@ -147,7 +157,7 @@
       
       <div class="col-md-2 tudo"></div>
       <div class="cards col-md-8 tudo" data-slick='{"slidesToShow": 3, "slidesToScroll": 3}'>
-        <div class="evento">
+        <div class="evento" data-aos="flip-right" data-aos-delay="200">
           <img src="imagens/natal.png" alt="">
           <h3>Evento 1</h3>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been thei</p>
@@ -155,7 +165,7 @@
             <a href="eventos.html">Saiba Mais</a>
           </div>
         </div>
-        <div class="evento">
+        <div class="evento" data-aos="flip-right" data-aos-delay="200">
           <img src="imagens/natal.png" alt="">
           <h3>Evento 2</h3>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been thei</p>
@@ -163,7 +173,7 @@
             <a href="eventos.html">Saiba Mais</a>
           </div>
         </div>
-        <div class="evento">
+        <div class="evento" data-aos="flip-right" data-aos-delay="200">
           <img src="imagens/natal.png" alt="">
           <h3>Evento 3</h3>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been thei</p>
@@ -171,7 +181,7 @@
             <a href="eventos.html">Saiba Mais</a>
           </div>
         </div>
-        <div class="evento">
+        <div class="evento" data-aos="flip-right" data-aos-delay="200">
           <img src="imagens/natal.png" alt="">
           <h3>Evento 4</h3>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been thei</p>
@@ -179,7 +189,7 @@
             <a href="eventos.html">Saiba Mais</a>
           </div>
         </div>
-        <div class="evento">
+        <div class="evento" data-aos="flip-right" data-aos-delay="200">
           <img src="imagens/natal.png" alt="">
           <h3>Evento 5</h3>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been thei</p>
@@ -187,7 +197,7 @@
             <a href="eventos.html">Saiba Mais</a>
           </div>
         </div>
-        <div class="evento">
+        <div class="evento" data-aos="flip-right" data-aos-delay="200">
           <img src="imagens/natal.png" alt="">
           <h3>Evento 6</h3>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been thei</p>
@@ -201,23 +211,23 @@
 
       <div class="col-md-12 col-sm-12 col-xs-12 associados" id="associados">
 
-        <div class="col-md-12 associados_title_1">
+        <div class="col-md-12 associados_title_1" data-aos="fade-down">
           <h1>Seja um associado</h1>
         </div>
 
-        <div class="associados_linha_1"></div>
+        <div class="associados_linha_1" data-aos="fade-down"></div>
 
-        <div class="col-md-12 associados_title_2">
+        <div class="col-md-12 associados_title_2" data-aos="fade-down">
           <h3>Descubra os benefícios de associar-se</h3>
         </div>
 
-        <div class="col-md-8 col-sm-8 col-xs-8 associados_texto">
+        <div class="col-md-8 col-sm-8 col-xs-8 associados_texto" data-aos="fade-down">
           <p>
             Associar-se ao Natal Convention Bureau é uma vantagem competitiva. Na qualidade de membro mantenedor, a empresa terá:
           </p>
         </div>
 
-        <div class="col-md-8 col-sm-8 col-xs-8 associados_texto_2">
+        <div class="col-md-8 col-sm-8 col-xs-8 associados_texto_2" data-aos="fade-down">
           <p>
           -Acesso preferencial às informações sobre os eventos na cidade;
           <br>
@@ -235,7 +245,7 @@
           </p>
         </div>
 
-        <div class="associados_linha_2"></div>
+        <div class="associados_linha_2" data-aos="fade-down"></div>
 
         <form>
           <h3>Preencha o formulário</h3>
@@ -268,7 +278,7 @@
       <div class="container-fluid contatos" id="contatos">
         <div class="row">
 
-          <div class="col-md-6 mapa">
+          <div class="col-md-6 mapa" data-aos="zoom-in" data-aos-delay="200">
 
             <h1>Localizando no maps</h1>
 
@@ -285,7 +295,7 @@
           </div>
 
           <div class="col-md-6 redes">
-            <div class="redes_caixa">
+            <div class="redes_caixa" data-aos="flip-right" data-aos-delay="200">
 
               <h1>Contatos</h1>
 
@@ -370,6 +380,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script type="text/javascript">
       $(function(){
@@ -382,9 +393,37 @@
           autoplaySpeed: 2000,
           prevArrow: '<span class="priv_arrow"><i class="fas fa-angle-left"></i></span>',
           nextArrow: '<span class="next_arrow"><i class="fas fa-angle-right"></i></span>',
+          responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  infinite: true,
+                }
+              },
+              {
+                breakpoint: 770,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 400,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
         });
 
       });
+    </script>
+
+    <script>
+      AOS.init();
     </script>
 
   </body>

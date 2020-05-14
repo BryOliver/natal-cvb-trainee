@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="eventos.css" media="screen and (color)">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
     <title>Eventos</title>
   </head>
 
@@ -14,7 +17,7 @@
           <div class="row">
 
             <header>
-                <div class="col-md-12 title">
+                <div class="col-md-12 title" data-aos="fade-right" data-aos-delay="200">
                     <h1>Evento</h1>
                     <h2>
                         Data: 00/00/0000<br>
@@ -24,11 +27,9 @@
             </header>
 
             <div class="col-md-12 conteudo">
-                <div class="eventos_linha"></div>
+                <div class="eventos_linha" data-aos="fade-down" data-aos-delay="400"></div>
 
-                <a class="botao" href="#form">Pular para a inscrição</a>
-
-                    <p class="col-md-12">
+                    <p class="col-md-12" data-aos="fade-down" data-aos-delay="400">
                         <img src="imagens/natal.png">
 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -47,17 +48,6 @@
                 
                 <div class="eventos_linha"></div>
             </div>
-
-            <form action="#" method="POST" id="form">
-                <h4>Formulário para inscrição</h4>
-                <label for="fname">Seu nome completo</label><br>
-                <input type="text" id="fname" name="fname" placeholder="Ex: Carlos Barbosa da Silva" class="input"><br>
-                <label for="lname">Seu E-mail</label><br>
-                <input type="text" id="lemail" name="lemail" placeholder="Ex: minhaconta@Gmail.com" class="input"><br>
-                <label for="fname">Telefone</label><br>
-                <input type="text" id="fnumber" name="fnumber" placeholder="Ex: (00) 0000-0000" class="input"><br><br>
-                <input type="submit" value="enviar" class="btn_form">
-            </form> 
 
             <div class="col-md-12">
                 <div class="eventos_button">
@@ -83,4 +73,11 @@
 
           </div>
       </div>
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+      <script>
+        AOS.init();
+      </script>
+
   </body>

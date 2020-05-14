@@ -24,6 +24,14 @@
         width: 95px;
     }
 
+    .links ul li a:hover{
+        color: #ffffff !important;
+        background-color: #EE2836;
+        border-radius: 40px;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.47);
+        transition: 0.4s;
+    }
+
     .nav_logos{
         float: right;
         margin-right: 5%;
@@ -44,7 +52,7 @@
     }
 
     .ig:hover{
-        color: #264A96;
+        color: #EE2836;
     }
 
     .fa-envelope{
@@ -53,7 +61,7 @@
     }
 
     .en:hover{
-        color: #EFD567;
+        color: #EE2836;
     }
 
     .fa-whatsapp{
@@ -78,8 +86,31 @@
     }
     
     .home{
-        background-color: #E8EEEC;
-        padding-top: 32%;
+        padding-top: 56%;
+    }
+
+    .onda{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: -2px;
+    }
+
+    .onda img{
+        width: 100%;
+    }
+
+    .background{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .background img{
+        width: 100%;
     }
     
     .home h2{
@@ -645,20 +676,43 @@
     }
     
     .home{
-        background-color: #E8EEEC;
-        padding-top: 60%;
+        padding-top: 58%;
+    }
+
+    .onda{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: -2px;
+    }
+
+    .onda img{
+        width: 100%;
+    }
+
+    .background{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .background img{
+        width: 100%;
     }
     
     .home h2{
         font-weight: bolder;
-        font-size: 140%;
+        font-size: 107%;
         float: right;
         margin-right: 5.5%;
     }
     
     .home h1{
         font-weight: bolder;
-        font-size: 250%;
+        font-size: 200%;
         float: right;
         margin-left: 60%;
     }
@@ -1212,25 +1266,47 @@
     .navbar{
         background-color: #8de4ff;
     }
-    
+
     .home{
-        background-color: #E8EEEC;
-        padding-top: 130%;
+        padding-top: 67%;
+    }
+
+    .onda{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: -2px;
+    }
+
+    .onda img{
+        width: 100%;
+    }
+
+    .background{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .background img{
+        width: 100%;
     }
     
     .home h2{
         font-weight: bolder;
-        font-size: 110%;
-        float: left;
-        margin-left: 10%;
+        font-size: 10px;
+        float: right;
+        margin-right: -1.5%;
     }
     
     .home h1{
         font-weight: bolder;
-        font-size: 180%;
-        float: left;
-        margin-top: 5%;
-        margin-left: 10%;
+        font-size: 15px;
+        float: right;
+        margin-left: 46%;
     }
 
     #quem_somos{
@@ -1419,35 +1495,19 @@
     }
     
     .cards .priv_arrow{
-        z-index: 9888;
-        position: absolute;
-        bottom: 50%;
-        left: -15%;
-        color: #fff;
-        width: 50px;
-        height: 50px;
-        background-color: #EE2836;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 50px;
-        display: inline-block;
-        cursor: pointer;
+        display: none;
     }
     
     .cards .next_arrow{
-        z-index: 9888;
-        position: absolute;
-        bottom: 47%;
-        right: -15%;
-        color: #fff;
-        width: 50px;
-        height: 50px;
-        background-color: #EE2836;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 50px;
-        display: inline-block;
-        cursor: pointer;
+        display: none;
+    }
+
+    .priv_arrow i{
+        display: none;
+    }
+
+    .next_arrow i{
+        display: none;
     }
     
     .botao_card{

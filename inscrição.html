@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="inscrição.css" media="screen and (color)">
     <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
     <title>Inscrição</title>
   </head>
 
@@ -15,7 +18,7 @@
             
             <div class="col-md-6 form_inscricao">
 
-              <form action="#" method="POST">
+              <form action="#" method="POST" data-aos="flip-up" data-aos-delay="400">
                 <h1>Formulário para inscrição</h1>
 
                 <div class="formulario">
@@ -41,22 +44,26 @@
                 </class>
 
                 </div>
-
+              
               </form>
+
+              <div class="mob_btn">
+                <a href="index.html" class="mobile_button">Voltar a página</a>
+              </div>
 
             </div>
 
             <div class="col-md-6 evento">
 
-              <h1>
+              <h1 data-aos="fade-right" data-aos-delay="200">
                 Evento
               </h1>
-              <h2>
+              <h2 data-aos="fade-right" data-aos-delay="200">
                 Data: 22/01/2019<br>
                 Local: Centro de Convenções de Natal
               </h2>
 
-              <img src="imagens/natal.png">
+              <img src="imagens/natal.png"  data-aos="flip-up" data-aos-delay="400">
 
               <div class="evento_btn">
                 <a href="index.html" class="button_2">Voltar a página</a>
@@ -80,4 +87,11 @@
             
           </div>
       </div>
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+      <script>
+        AOS.init();
+      </script>
+
   </body>
