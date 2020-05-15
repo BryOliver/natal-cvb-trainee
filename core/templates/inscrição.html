@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'inscrição.css' %}" media="screen and (color)">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="shortcut icon" href="{$ static 'imagens\desert.png' %}">
+
+    <title>Inscrição</title>
+  </head>
+
+  <body>
+      <div class="container-fluid">
+          <div class="row">
+            
+            <div class="col-md-6 form_inscricao">
+
+              <form action="#" method="POST" data-aos="flip-up" data-aos-delay="400">
+
+                {% if is_valid %}
+                <div class="validacao">
+                <h4>Seu pedido de inscrição para o evento foi realizado com sucesso</h4>
+                </div>
+                {% else %}
+
+                <h1>Formulário para inscrição</h1>
+
+                {% csrf_token %}
+
+                <!-- <div class="formulario">
+
+                  <div class="formulario_input">
+                    <h3>Nome</h3>
+                    <input type="text" name="txt_nome" class="text_bar" placeholder="Ex: Carlos Barbosa da Silva">
+                  </div>
+
+                  <div class="formulario_input">
+                    <h3>E-mail</h3>
+                    <input type="text" name="txt_email" class="text_bar" placeholder="Ex: minhaconta@Gmail.com">
+  
+                  </div>
+
+                  <div class="formulario_input">
+                    <h3>Telefone</h3>
+                    <input type="text" name="txt_telefone" class="text_bar" placeholder="Ex: (00) 0000-0000">
+                  </div>
+                  
+                <class class="botao">
+                  <input type="submit" class="form_btn" value="Confirme sua inscrição">
+                </class>
+
+                </div> -->
+
+                {% for field in form %}
+                <div class="formulario_input">
+                  <div>
+                  <h3>{{ field.label_tag }}</h3>
+                </div>
+        
+                <div>
+                  {{ field }}
+                </div>
+                  {% if field.errors %}
+                    <ul class="errorlist">
+                      {% for errors in fild.errors %}
+                      <li>
+                        { error }
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </div>
+                {% endfor %}
+
+                <class class="botao">
+                  <input type="submit" class="form_btn" value="Confirme sua inscrição">
+                </class>
+                {% endif %}
+              
+              </form>
+
+              <div class="mob_btn">
+                <a href="{{cards.get_absolute_url}}" class="mobile_button">Voltar a página</a>
+              </div>
+
+            </div>
+
+            <div class="col-md-6 evento">
+
+              <h1 data-aos="fade-right" data-aos-delay="200">
+                {{ cards.titulo }}
+              </h1>
+              <h2 data-aos="fade-right" data-aos-delay="200">
+                Data/Hora:<br>{{ cards.published_date }}<br><br>
+                Local:<br>{{ cards.local }}
+              </h2>
+
+              <img src="{{ cards.imagem.url }}"  data-aos="flip-up" data-aos-delay="400">
+
+              <div class="evento_btn">
+                <a href="{{cards.get_absolute_url}}" class="button_2">Voltar a página</a>
+              </div>
+
+            </div>
+
+            <footer class="col-md-12">
+              <h3>
+                  Natal CVB @ 2020. Desenvolvido por
+              </h3>
+  
+              <a href="http://www.ejectufrn.com.br/" target="_blank">
+                  <img src="{% static 'imagens/eject_logo.png' %}">
+              </a>
+  
+              <h3>
+                  EJECT
+              </h3>
+          </footer>
+            
+          </div>
+      </div>
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+      <script>
+        AOS.init();
+      </script>
+
+      <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5ebc9a3f8ee2956d73a0ec5b/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+      </script>
+
+  </body>

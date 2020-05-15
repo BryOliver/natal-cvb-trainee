@@ -107,9 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-BR'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -128,8 +128,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'core', 'media')
 MEDIA_URL  = '/media/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFALT_FROM_EMAIL = 'Nome email@gmail.com'
-EMAIL_HOST_USER = 'traineesquadii@gmail.com'
+EMAIL_HOST_USER = "traineesquadii@gmail.com"
+DEFAULT_FROM_EMAIL = 'Nome <email@gmail.com>'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True

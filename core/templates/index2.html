@@ -1,0 +1,423 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}" media="screen and (color)">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick/slick-theme.css' %}"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="shortcut icon" href="{$ static 'imagens\desert.png' %}">
+
+    <title>Natal Convention Bureau</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-12 barra">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar">
+
+          <img class="navbar-brand logo_navbar" src="{% static 'imagens/natal_cvb_logo.png' %}"></img>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsite">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse links" id="navbarsite">
+              <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#quem_somos">Quem somos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#eventos">Eventos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#associados">Seja um associado</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contatos">Contatos</a>
+                </li>
+                
+              </ul>
+
+              <div class="nav_logos">
+                <a href="https://www.instagram.com/natalcvb/?hl=tl" target="_blank">
+                  <i class="fab fa-instagram ig"></i>
+                </a>
+                <a href="mailto:contato@natalcvb.com.br?subject=contrato" target="_blank">
+                  <i class="far fa-envelope en"></i>
+                </a>
+                <a href="tel:+558432192000" target="_blank">
+                  <i class="fab fa-whatsapp wp"></i>
+                </a>
+              </div>
+              
+            </div>
+
+        </nav>
+      </div>
+
+      <div class="col-md-12 home" id="home">
+
+        <div class="onda">
+          <img src="{% static 'imagens/onda.png' %}">
+        </div>
+
+        <div class="background">
+          <img src="{{ home.imagem.url }}">
+        </div>
+
+        <h2 data-aos="fade-left">Bem-vindo ao site da</h2>
+        <h1 data-aos="fade-left">NATAL<br>CONVENTION<br>BUREAU</h1>
+
+      </div>
+
+      <div class="sobre" id="quem_somos">
+
+        <div class="quem_somos">
+
+          <div data-aos="fade-down" class="text_img">
+            <img src="{% static 'imagens/natal_cvb_logo_2.png' %}">
+          <div class="quem_somos_linha_1"></div>
+  
+          <div class="quem_somos_title">
+            <h1>Sobre a Natal Convention Bureau</h1>
+          </div>
+  
+          <div class="quem_somos_texto_1">
+            <p>
+              {{ quemsomos.descricao | linebreaks }}
+            </p>
+          </div>
+          </div>
+  
+          <div class="quem_somos_texto_2">
+  
+            <div data-aos="fade-down" data-aos-delay="400" class="subtextos">
+              <h2>Missão</h2>
+            <p>
+              {{ quemsomos.missao | linebreaks }}
+            </p>
+            </div>
+  
+            <div data-aos="fade-down" data-aos-delay="600" class="subtextos">
+              <h2>Visão</h2>
+            <p>
+              {{ quemsomos.visao | linebreaks }}
+            </p>
+            </div>
+  
+            <div data-aos="fade-down" data-aos-delay="800" class="subtextos">
+              <h2>Valores</h2>
+              <p>
+                {{ quemsomos.valores | linebreaks }}
+              </p>
+            </div>
+  
+          </div>
+  
+        </div>
+
+        <div class="buttons" data-aos="flip-up" data-aos-delay="400">
+          <a href="nossos_serviços.html" class="quem_somos_btn_1">Nossos serviços</a>
+          <a href="conheça_natal.html" class="quem_somos_btn_2">Conheça Natal-RN</a>
+        </div>
+
+      </div>
+
+      <div class="evento_titulo col-md-12" id="eventos">
+        <h1>Eventos</h1>
+      </div>
+      
+      <div class="col-md-2 tudo"></div>
+      <div class="cards col-md-8 tudo" data-slick='{"slidesToShow": 3, "slidesToScroll": 3}'>
+
+        {% for card in cards %}
+        <div class="evento" data-aos="flip-right" data-aos-delay="200">
+          <img src="{{ card.imagem.url }}" alt="">
+          <h3>{{ card.titulo }}</h3>
+          <p>{{ card.descricao }}</p>
+          <div class="botao_card">
+            <a href="{{card.get_absolute_url}}">Saiba Mais</a>
+          </div>
+        </div>
+
+        {% empty %}
+
+        <div class="evento">
+          <img src="{% static 'imagens/natal_cvb_logo_2.png' %}" alt="">
+          <h3>Eventos em breve</h3>
+          <p>Em breve mais novidades</p>
+        </div>
+
+        {% endfor %}
+
+      </div>
+      <div class="col-md-2 tudo"></div>
+      <div class="col-md-12 venha_conferir">Venha conferir as novidades que estão acontecendo nesse período</div>
+
+      <div class="col-md-12 col-sm-12 col-xs-12 associados" id="associados">
+
+        <div class="col-md-12 associados_title_1" data-aos="fade-down">
+          <h1>Seja um associado</h1>
+        </div>
+
+        <div class="associados_linha_1" data-aos="fade-down"></div>
+
+        <div class="col-md-12 associados_title_2" data-aos="fade-down">
+          <h3>Descubra os benefícios de associar-se</h3>
+        </div>
+
+        <div class="col-md-8 col-sm-8 col-xs-8 associados_texto" data-aos="fade-down">
+          <p>
+            Associar-se ao Natal Convention Bureau é uma vantagem competitiva. Na qualidade de membro mantenedor, a empresa terá:
+          </p>
+        </div>
+
+        <div class="col-md-8 col-sm-8 col-xs-8 associados_texto_2" data-aos="fade-down">
+          <p>
+            {{ beneficios.descricao | linebreaks }}
+          </p>
+        </div>
+
+        <div class="associados_linha_2" data-aos="fade-down"></div>
+
+        <form method="POST">
+
+          {% if is_valid %}
+          <div class="validacao">
+          <h4>Seu pedido de associamento foi enviado com sucesso</h4>
+          </div>
+          {% else %}
+
+          <h3>Preencha o formulário</h3>
+          {% csrf_token %}
+
+          <!-- <div class="form_group">
+            <label for="exampleInputEmail1">Seu nome completo (obrigatório)</label>
+            <input type="text" class="form_control" placeholder="Ex: Carlos Barbosa da Silva">
+          </div>
+          <div class="form_group">
+            <label for="exampleInputEmail1">Nome da sua empresa (obrigatório)</label>
+            <input type="text" class="form_control" placeholder="Ex: EJECT">
+          </div>
+          <div class="form_group">
+            <label for="exampleInputEmail1">Seu email (obrigatório)</label>
+            <input type="email" class="form_control" aria-describedby="emailHelp" placeholder="Ex: minhaconta@Gmail.com">
+            <small id="emailHelp" class="form_text text_muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+          </div>
+          <div class="form_group">
+            <label for="exampleInputPassword1">Telefone (obrigatório)</label>
+            <input type="text" class="form_control" placeholder="Ex: (00) 0000-0000">
+          </div>
+          <div class="form_group">
+            <label for="exampleInputPassword1">Descreva sua empresa</label>
+            <input type="text" class="form_control" placeholder="Ex: Empresa de serviços web">
+          </div> -->
+
+          {% for field in form %}
+          <div class="form_group">
+            <div class="label">
+            {{ field.label_tag }}
+          </div>
+  
+          <div>
+            {{ field }}
+          </div>
+            {% if field.errors %}
+              <ul class="errorlist">
+                {% for errors in fild.errors %}
+                <li>
+                  { error }
+                </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+          {% endfor %}
+
+          <button type="submit" class="form_btn">Enviar</button>
+        {% endif %}
+
+          
+        </form>
+
+      </div>
+
+      <div class="container-fluid contatos" id="contatos">
+        <div class="row">
+
+          <div class="col-md-6 mapa" data-aos="zoom-in" data-aos-delay="200">
+
+            <h1>Localizando no maps</h1>
+
+            <div class="lupa">
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.3376055508143!2d-35.20590418538841!3d-5.807905995791456!2m3!1f0!2f0!3
+              f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ffb9f5ede92f%3A0x68f92c61dda90c6a!2sNatal%20Convention%20Bureau!5e0!3m2!1sen!2sbr!4v1589220328765!5m2!1sen!2sbr"
+              allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+            <div class="perna_lupa"></div>
+            
+            </div>
+
+          </div>
+
+          <div class="col-md-6 redes">
+            <div class="redes_caixa" data-aos="flip-right" data-aos-delay="200">
+
+              <h1>Contatos</h1>
+
+              <ul>
+                <li>
+                  <a href="https://www.instagram.com/natalcvb/?hl=tl" target="_blank">
+                  <img src="{% static 'imagens/instagram_logo.png' %}" alt="Instagram">
+                  <p>
+                    @Natalcvb
+                  </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/natalcvb/" target="_blank">
+                  <img src="{% static 'imagens/facebook_logo.png' %}" alt="Facebook">
+                  <p>
+                    /Natal Conventon Bureau
+                  </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:contato@natalcvb.com.br?subject=contrato" target="_blank">
+                  <img src="{% static 'imagens/email_logo.png' %}" alt="Email">
+                  <p>
+                    contato@natalcvb.com.br
+                  </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+558432192000" target="_blank">
+                  <img src="{% static 'imagens/telephone_logo.png' %}" alt="Telefone">
+                  <p>
+                    (84) 3219-2000
+                  </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://goo.gl/maps/vZJUbEzqbrEpQALL6" target="_blank">
+                  <img src="{% static 'imagens/location_logo.png' %}">
+                  <p class="endereco">
+                    Av. Senador Salgado Filho, 1718
+                    Cond. Tirol Way Office
+                    Salas: 1204 e 1205
+                    Tirol - Natal, RN -Cep: 59.022.00
+                  </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/natalcvb?lang=en" target="_blank">
+                  <img src="{% static 'imagens/twitter_logo.png' %}" alt="Twitter">
+                  <p>
+                    @Natalcvb
+                  </p>
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+          <footer class="col-md-12">
+            <h3>
+                Natal CVB @ 2020. Desenvolvido por
+            </h3>
+
+            <a href="http://www.ejectufrn.com.br/" target="_blank">
+              <img src="{% static 'imagens/eject_logo.png' %}">
+            </a>
+
+            <h3>
+                EJECT
+            </h3>
+        </footer>
+
+        </div>
+      </div>
+
+    </div>               
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'slick/slick/slick.min.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+
+        $('.cards').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay:true,
+          autoplaySpeed: 2000,
+          prevArrow: '<span class="priv_arrow"><i class="fas fa-angle-left"></i></span>',
+          nextArrow: '<span class="next_arrow"><i class="fas fa-angle-right"></i></span>',
+          responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  infinite: true,
+                }
+              },
+              {
+                breakpoint: 770,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 400,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+        });
+
+      });
+    </script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5ebc9a3f8ee2956d73a0ec5b/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+    </script>
+
+  </body>
+</html>

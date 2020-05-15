@@ -1,76 +1,103 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
-from .forms import SejaAssociado
-from .forms import Inscrever
 from django.core.mail import send_mail
+from .forms import Associado
+from .forms import Inscricao
 from django.conf import settings
-from .models import Post
-from .models import Cards
-from .models import Cardsdois
-from .models import Cardsum
+from .models import Home
+from .models import Quemsomos
 from .models import Card
 from .models import Servico
 from .models import Beneficios
-from .models import Missao
-from .models import Visao
-from .models import Valores
-from .models import Contatos
 
 # Create your views here. nossos_serviços.html
 
-def post_list(request):
+def post_list(request):  
+    quemsomos = Quemsomos.objects.get(id = 1)
+    home = Home.objects.get(id = 1)
+    cards = Card.objects.all()
+    beneficios = Beneficios.objects.get(id = 1)
 
+    context = {}
     if request.method == 'POST':
-        form = SejaAssociado(request.POST)
-        if form.is_valid():
-            print(form.cleaned_data['nome'])
-            print(form.cleaned_data['empresa'])
-            print(form.cleaned_data['email'])
-            print(form.cleaned_data['telefone'])
-            print(form.cleaned_data['descricao'])
-            form.send_mail()
-            form = SejaAssociado()
+
+            form = Associado(request.POST)
+            if form.is_valid():
+                context['is_valid'] = True
+                form.send_mail()
+                form = Associado()
 
     else:
-        form = SejaAssociado()
-    
-    post = Post.objects.get(id = 1)
-    cards = Cards.objects.all()
-    cardsdois = Cardsdois.objects.get(id =1)
-    cardsum = Cardsum.objects.all()
-    card = Card.objects.get( id = 1)
-    beneficios = Beneficios.objects.all()
-    missao = Missao.objects.get(id = 1)
-    visao = Visao.objects.get(id = 1)
-    valores = Valores.objects.all()
-    contatos = Contatos.objects.all()
-
-    # try:
-    #  cardsum = Cardsum.objects.get(id = 1)
-    #  context = {'cardsum': cardsum,}
-    # except Cardsum.DoesNotExist:
-    #  cards = Cards.objects.all()
+        form = Associado()
 
 
-    context = {
-        'cardsum': cardsum,
-        'cardsdois': cardsdois,
-        'cards': cards,
-        'card': card,
-        'beneficios': beneficios,
-        'missao': missao,
-        'visao': visao,
-        'valores': valores,
-        'post': post,
-        'contatos': contatos,
-        'form' : form,
-    }
+    context['home'] = home
+    context['form'] = form
+    context['cards'] = cards
+    context['beneficios'] = beneficios
+    context['quemsomos'] = quemsomos
+
     return render(request, 'index.html', context)
 
+def voltar(request, slug):  
+    quemsomos = Quemsomos.objects.get(id = 1)
+    home = Home.objects.get(id = 1)
+    cards = Card.objects.all()
+    beneficios = Beneficios.objects.get(id = 1)
+
+    context = {}
+    if request.method == 'POST':
+        form = Associado(request.POST)
+        if form.is_valid():
+            context['is_valid'] = True
+            form.send_mail()
+            form = Associado()
+
+    else:
+        form = Associado()
+
+    context['home'] = home
+    context['form'] = form
+    context['cards'] = cards
+    context['beneficios'] = beneficios
+    context['quemsomos'] = quemsomos
+
+    return render(request, 'index2.html', context)
+
 def natal(request):
-    conheca = Natal.objects.all()
-    return render(request,'conheça_natal.html',{'conheca': conheca,})
+    return render(request,'conheça_natal.html',)
+
+def voltar_natal(request, slug):
+    return render(request,'conheça_natal.html',)
 
 def servicos(request):
-    servicos = Servico.objects.all()
+    servicos = Servico.objects.get(id = 1)
     return render(request,'nossos_serviços.html',{'servicos': servicos,})
+
+def voltar_servicos(request, slug):
+    servicos = Servico.objects.get(id = 1)
+    return render(request,'nossos_serviços.html',{'servicos': servicos,})
+
+def evento(request, slug):
+    cards = get_object_or_404(Card, slug=slug)
+    return render(request,'eventos.html',{'cards': cards,})
+
+def inscricao(request, slug):
+    cards = get_object_or_404(Card, slug=slug)
+    context = {}
+    if request.method == 'POST':
+        form = Inscricao(request.POST)
+        if form.is_valid():
+            context['is_valid'] = True
+            form.send_mail(cards)
+            form = Inscricao()
+
+    else:
+        form = Inscricao()
+
+    context['form'] = form
+    context['cards'] = cards
+
+    return render(request, 'inscrição.html', context)
+
+
